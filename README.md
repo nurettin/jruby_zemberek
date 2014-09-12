@@ -28,14 +28,20 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-    require "jruby_zemberek"
-    jz= JrubyZemberek.new
-    p jz.metin_cozumle "dünyaya merhaba diyor"
+  require "jruby_zemberek"
+  jz= JrubyZemberek.new
+  p jz.metin_cozumle "dünyaya merhaba dedi"
 ```
+
+## Sample Output
+
+    [{:kelime=>"dünyaya", :cozumlendi=>true, :cozumler=>[{:kok=>"dünya", :kok_tip=>"ISIM", :ekler=>["ISIM_KOK", "ISIM_YONELME_E"]}], :oneriler=>[]}, 
+    {:kelime=>"merhaba", :cozumlendi=>true, :cozumler=>[{:kok=>"merhaba", :kok_tip=>"ISIM", :ekler=>["ISIM_KOK"]}], :oneriler=>[]}, 
+    {:kelime=>"dedi", :cozumlendi=>true, :cozumler=>[{:kok=>"de", :kok_tip=>"FIIL", :ekler=>["FIIL_KOK", "FIIL_GECMISZAMAN_DI"]}], :oneriler=>[]}]
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/jruby_zemberek/fork )
+1. Fork it ( https://github.com/nurettin/jruby_zemberek/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
