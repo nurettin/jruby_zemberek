@@ -1,13 +1,13 @@
 #encoding: UTF-8
 
-require_relative 'lib/java/zemberek/zemberek-cekirdek-2.1.1.jar'
-java_import 'net.zemberek.erisim.Zemberek'
-java_import 'net.zemberek.araclar.turkce.YaziIsleyici'
+require_relative "jruby_zemberek/java/zemberek/zemberek-cekirdek-2.1.1.jar"
+java_import "net.zemberek.erisim.Zemberek"
+java_import "net.zemberek.araclar.turkce.YaziIsleyici"
 
-require_relative 'lib/java/zemberek/zemberek-tr-2.1.1.jar'
-java_import 'net.zemberek.tr.yapi.TurkiyeTurkcesi'
+require_relative "jruby_zemberek/java/zemberek/zemberek-tr-2.1.1.jar"
+java_import "net.zemberek.tr.yapi.TurkiyeTurkcesi"
 
-class JrubyZemberek2
+class JrubyZemberek
   def initialize
     @z= Zemberek.new(TurkiyeTurkcesi.new)
   end
